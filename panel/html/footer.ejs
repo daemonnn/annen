@@ -1,0 +1,241 @@
+   <style>
+        @keyframes slide-up {
+            from {
+                transform: translate(0, 100%);
+            }
+        }
+
+        @keyframes wavePathAnim {
+            0% {
+                d: path("M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z")
+            }
+
+            50% {
+                d: path("M655.558582,28.4898877 C500.191373,61.6062216 422.833785,83.5422763 266.940085,49.8995879 C112.480383,16.5663637 84.0992497,8.02840272 0,44.7243294 L0,150.727527 L1920,150.727527 L1920,49.8995879 C1580.91676,-34.8808285 1438.10804,73.6768193 1148.0266,38.0019829 C857.945166,2.32714659 810.925791,-4.62644617 655.558582,28.4898877 Z")
+            }
+
+            to {
+                d: path("M842.322034,38.0019829 C686.954825,71.1183168 623.386282,53.08497 467.492582,19.4422816 C313.032879,-13.8909426 84.0992497,8.02840272 0,44.7243294 L0,150.727527 L1920,150.727527 L1920,76.8685643 C1512.23604,-35.3595639 1568.70222,67.4289432 1278.62078,31.7541069 C988.539347,-3.92072949 997.689243,4.88564905 842.322034,38.0019829 Z")
+            }
+        }
+
+        ._footer {
+            transition: background-color 0.5s ease;
+            /* animation: slide-up 1s ease; */
+            display: flex;
+            padding: 40px 0;
+            background-color: #d49818;
+            color: #fff;
+            position: relative;
+            margin-top: 200px;
+            /* transform: translate(0, 85px); TODO */
+        }
+
+        ._footer:hover {
+            background-color: #17181b;
+        }
+
+        ._footer:hover > .wave > path.wavePath {
+            color: #17181b;
+        }
+
+        svg.wave {
+            position: absolute;
+            color: #17181b;
+            bottom: 100%;
+        }
+
+        .hero > svg.wave {
+            bottom: 0;
+            transform: rotate(180deg) translate(0, 0px);
+            top: 100%;
+        }
+
+        svg.wave > path.wavePath {
+            animation: wavePathAnim 10s ease infinite alternate;
+            transition: color 0.5s ease;
+        }
+
+        svg.wave > path.wavePath2 {
+            animation: wavePathAnim 10s ease infinite alternate;
+            animation-delay: 3s;
+            transition: color 0.5s ease;
+        }
+
+        ._footer > ._main {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        ._footer > ._main > ._brand {
+            display: inline-flex;
+            flex-direction: column;            opacity: 0.7;
+            transition: opacity 0.35s ease;
+            margin-bottom: 10px;
+        }
+
+        ._footer > ._main > ._brand:hover {
+            opacity: 1;
+        }
+
+        ._footer > ._main > ._brand > ._logo {
+            transition: filter 0.2s ease;
+            width: 128px;
+            height: 128px;
+        }
+
+        ._footer > ._main > ._brand > ._title {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-bottom: 7px;
+        }
+
+        ._footer > ._main > ._contact {
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        ._footer > ._main > ._contact > a {
+            text-decoration: underline;
+        }
+
+        ._footer > ._main > ._copy {
+            color: #fff;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        ._footer > ._main > ._dmca {
+            color: #fff;
+            opacity: 0.7;
+            margin-right: 5px;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            transition: opacity 0.35s ease;
+        }
+
+        ._footer > ._main > ._dmca:hover {
+            opacity: 1;
+        }
+
+        #footerpartners {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            margin-bottom: 7px;
+            color: #fff;
+            transition: opacity 0.35s ease;
+            opacity: 0.7;
+        }
+
+        #footerpartners:hover {
+            opacity: 1;
+        }
+
+        #socialicons {
+            color: #fff;
+            opacity: 0.7;
+            margin-right: 5px;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            transition: opacity 0.35s ease;
+        }
+
+        #socialicons:hover {
+            opacity: 1;
+        }
+    </style>
+
+ <!-- GTranslate: https://gtranslate.io/ -->
+
+<style type="text/css">
+<!--
+a.gflag {vertical-align:middle;font-size:32px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/32.png);}
+a.gflag img {border:0;}
+a.gflag:hover {background-image:url(//gtranslate.net/flags/32a.png);}
+#goog-gt-tt {display:none !important;}
+.goog-te-banner-frame {display:none !important;}
+.goog-te-menu-value:hover {text-decoration:none !important;}
+body {top:0 !important;}
+#google_translate_element2 {display:none!important;}
+-->
+</style>
+
+<div id="google_translate_element2"></div>
+<script type="text/javascript">
+function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'tr',autoDisplay: false}, 'google_translate_element2');}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+/* ]]> */
+</script>
+<div class="_footer">
+ <div class="subbody">
+<div class="fullsize">
+<div class="container">
+ <div class="subbody">
+<div class="fullsize">
+<div class="container">
+   <div class="subbody">
+<div class="fullsize">
+<div class="container">
+   <div class="subbody">
+<div class="fullsize">
+<div class="container">
+   <div class="subbody">
+<div class="fullsize">
+<div class="container">
+  
+        <left><h5 class="_copy" style="color:white">
+EN İYİ DISCORD SUNUCUSUNU OLUŞTURMAYA HAZIR MISIN?
+          </h1></left>
+  <left><tclass="_copy" style="color:lightgrey">Discord sunucunu ortalama gecikme süresi değeri ile seviye, müzik; moderasyon, gelişmiş koruma ve eğlence komutları ile donat.</t></left>
+            
+  </div></div></div>
+    </div>
+  
+    <script type='text/javascript'>
+var DADrightclicktheme = 'Dark';
+var DADrightclickimage = 'http://i.hizliresim.com/8gWk6d.png';
+</script>
+      
+      <body onkeydown="return false">
+        
+        <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false"></body>
+
+<script type="text/javascript">
+
+//form tags to omit in NS6+:
+var omitformtags=["input", "textarea", "select"]
+
+omitformtags=omitformtags.join("|")
+
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+
+function reEnable(){
+return true
+}
+
+if (typeof ********.onselectstart!="undefined")
+********.onselectstart=new Function ("return false")
+else{
+********.onmousedown=disableselect
+********.onmouseup=reEnable
+}
+
+</script>
+<body onkeydown="return false">
